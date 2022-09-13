@@ -4,19 +4,12 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: [
-      'localhost',
-      'i.pinimg.com',
-      'static.wikia.nocookie.net',
-      'upload.wikimedia.org',
-      'smoda.elpais.com',
-      'media.vandalsports.com',
-      'img.ecartelera.com',
-      'www.tebeosfera.com',
-      'www.ecartelera.com',
-      'www.tebeosfera.com',
-      'movie.com', 'cdn.europosters.eu', 'pics.filmaffinity.com',
-      'imagenes.20minutos.es'
+      'localhost'
     ]
+  },
+  env: {
+    API_PATH: 'http://localhost:5001/api/v1/',
+    API_STATIC: 'http://localhost:5001/'
   }
 }
 

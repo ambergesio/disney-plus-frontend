@@ -1,96 +1,73 @@
 @import './variables.module.scss';
+@import './fonts.module.scss';
+
+
 
 .main {
-    display: grid;
-    place-content: center;
 
-    background-image: url('../public/images/interface/original.jpeg');
-    background-position: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 800px;
+
+    background-image: url('../public/images/interface/main_original.jpeg');
+    background-position: 100% 0%;
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: black;
 
-    @media only screen and (max-width: 900px) {
-        background-size: fit-content;
+    
+    @media only screen and (max-width: 992px) {
+        background-image: url('../public/images/interface/original.jpeg');
         background-position: top;
-    }
-}
-
-.fade {
-    width: 100vw;
-    display: flex;
-    flex-flow: row-reverse wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    min-height: 540px;
-
-    // border: solid 4px red;
-    // background-image: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1),rgba(255,0,0,0));
-    background:linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 43%, rgba(0,0,0,0) 50%);
-
-
-    @media only screen and (max-width: 1080px) {
-        background: none;
-        justify-content: center;
-    }
-}
-
-.logbar {
-    padding: 1.4rem;
-    display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-    height: 45px;
-    position: fixed;
-    left: 0;
-    right: 0
+        
+        height: 780px;
+        padding: 1.8rem;
+    }
+    @media only screen and (max-width: 768px) {
+        height: 580px;
+    }
+
 }
 
-.login {
-    margin-top: 6px;
-    padding: .7rem 1.5rem;
-    font-size: 1rem;
-    color: white;
-    border: solid 1px white;
-    background: black;
-    transition: all .2s;
-    cursor: pointer;
-    
-    &:hover {
-        color: black;
-        border: solid 1px black;
-        background: white;
-        transition: all .2s;
-    }
-}
 
 .hero {
+    width: 50%;
     display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    margin: 2rem;
+
+    @media only screen and (max-width: 992px) {
+        width: 80%;
+    }
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+
 }
 
-._blank {
-    margin: 4rem;
-    width: 400px;
-    height: 150px;
-}
 
 .title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
     text-align: center;
+
+    @media only screen and (max-width: 756px) {
+        font-size: 1.3rem;
+    }
 }
 
 .logo {
-    width: 300px;
+    width: 320px;
     height: auto;
 
     @media only screen and (max-width: 756px) {
-        width: 200px;
+        width: 180px;
     }
 }
 
@@ -99,13 +76,14 @@
     display: grid;
     place-content: center;
     width: 100%;
-    height: 60px;
-    font-size: 1.4rem;
+    min-height: 68px;
+    font-size: 1.2rem;
     font-weight: 300;
     color: white;
     cursor: pointer;
 
     border: none;
+    border-radius: 4px;
     background-color: $register;
     transition: all .3s;
     
@@ -113,4 +91,170 @@
         background-color: $registerhover;
         transition: all .3s;
     }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1rem;
+        min-height: 50px;
+    }
+}
+
+.devices {
+    padding: 6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    @media only screen and (max-width: 992px) {
+        padding: 1.8rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        flex-flow: row wrap;
+    }
+}
+
+
+.content {
+    width: 450px;
+}
+
+.watch {
+    width: auto;
+    font-family: 'Inter';
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: left;
+
+    @media only screen and (max-width: 992px) {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.enjoy {
+    width: auto;
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: left;
+    line-height: 2rem;
+    letter-spacing: .1em;
+
+    @media only screen and (max-width: 992px) {
+        font-size: .9rem;
+        text-align: center;
+    }
+}
+
+.platform_title {
+    margin-bottom: 1.2rem;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.6rem;
+    }
+}
+
+.all_platforms {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media only screen and (max-width: 768px) {
+        flex-flow: row wrap;
+    }
+}
+.platforms {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.platform {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: solid 2px red;
+
+    h3 {
+        font-family: 'Inter';
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+
+        @media only screen and (max-width: 992px) {
+            font-size: 1.3rem;
+        }
+    }
+    p {
+        font-family: 'Inter';
+        font-size: 1.05rem;
+        font-weight: 200;
+        text-align: center;
+        line-height: 1.8rem;
+    }
+}
+
+.expand {
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgb(30, 30, 30);
+    transition: height .3s ease;
+}
+
+.block {
+    padding-left: 1rem;
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    font-family: 'Inter';
+    font-size: 1.3rem;
+    color: white;
+    transition: height .3s ease;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1rem;
+    }
+
+    button {
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-family: 'Inter';
+        font-size: 2.3rem;
+        color: white;
+    }
+}
+
+.expanded {
+    visibility: visible;
+    opacity: 1;
+    padding-left: 1rem;
+    display: block;
+    font-family: 'Inter';
+    line-height: 2.2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    transition: all .2s ease-in-out;
+    transition-property: line-height, opacity;
+}
+
+.contracted {
+    visibility: hidden;
+    line-height: 0rem;
+    opacity: 0;
+    color: rgb(0, 0, 0);
+    transition: all .2s ease-in-out;
+    transition-property: line-height, opacity;
 }

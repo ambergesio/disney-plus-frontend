@@ -1,4 +1,4 @@
-@import '../styles/variables.module.scss';
+@import '../../styles/variables.module.scss';
 
 .container {
     padding-top: 2rem;
@@ -77,8 +77,16 @@
     margin-top: 1rem;
     font-size: .9rem;
     color: #d1d1d1;
-    font-weight: lighter;
+    font-weight: 200;
 }
+
+.error {
+    margin-top: .3rem;
+    font-size: 1rem;
+    color: #f727a7;
+    font-weight: 500;
+}
+
 .signup {
     margin-left: .4rem;
     color: #ffffff;

@@ -1,0 +1,245 @@
+@import '../../styles/fonts.module.scss';
+
+.overlay {
+    background: linear-gradient(to bottom,rgba(19,18,23,0) 0%, rgba(19, 18, 23, 0.9) 90%);
+
+    @media only screen and (max-width: 576px) {
+        background: linear-gradient(to bottom,rgba(19,18,23,0) 0%, rgba(35,40,60,1) 60%);
+    }
+}
+
+.main {
+    padding: 3% 5%;
+    @media only screen and (max-width: 768px) {
+        padding: 10% 8%;
+    }
+}
+
+.title_container {
+    width: 350px;
+    
+    @media only screen and (max-width: 768px) {
+        width: 45%;
+    }
+}
+
+.buttons {
+    margin: 1.2rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+
+.watch_now {
+    cursor: pointer;
+    padding: 1.2rem 1.4rem;
+
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: .7rem;
+        
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: black;
+    border-radius: .3rem;
+    background: white;
+    border: none;
+    transition: all .4s;
+
+    @media only screen and (max-width: 768px) {
+        font-size: .8rem;
+        padding: 0.6rem 0.9rem;
+    }
+
+    &:hover {
+        color: black;
+        background-color: rgb(213, 213, 213);
+    }
+
+ 
+}
+
+.trailer {
+    cursor: pointer;
+    padding: 1.2rem 1.4rem;
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    border-radius: .3rem;
+    background: rgb(0, 0, 0);
+    border: solid 1px white;
+    transition: all .4s;
+
+    @media only screen and (max-width: 768px) {
+        font-size: .8rem;
+        padding: 0.6rem 0.9rem;
+    }
+
+    &:hover {
+        color: black;
+        background-color: white;
+    }
+}
+
+.description {
+    margin:  0  0 2rem 0;
+    max-width: 65%;
+    font-size: 1.1rem;
+    font-family: 'Inter';
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    
+    @media only screen and (max-width: 768px) {
+        max-width: 100%;
+    }
+}
+
+
+.extras {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    border-bottom: solid 1px #9a9a9a;
+}
+
+.extras_item {
+    cursor: pointer;
+    position: relative;
+
+    margin: 1rem 0;
+    font-family: 'Inter';
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #f0f0f0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        left: 0;
+        bottom: -1rem;
+        background: rgb(255, 255, 255);
+        transition: height .3s;
+    }
+    
+    &:hover::after {
+        height: 4px;
+        transition: height .3s;
+    }
+
+}
+
+.extras_item_active {
+    cursor: pointer;
+    position: relative;
+
+    margin: 1rem 0;
+    font-family: 'Inter';
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #f0f0f0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        left: 0;
+        bottom: -1rem;
+        background: rgb(255, 255, 255);
+    }
+
+}
+
+
+.toggle_info {
+    margin: 2rem 0;
+}
+
+.details_info {
+    display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+    gap: 3rem;
+}
+
+.details {
+    // padding: 0 1rem 0 0;
+    width: 50%;
+    font-size: 1.1rem;
+    font-family: 'Inter';
+    font-weight: 200;
+    line-height: 2rem;
+    
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        
+    }
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.item_title {
+    margin: .4rem 0;
+    font-size: .9rem;
+    font-weight: 100;
+    color: white;
+}
+.item {
+    margin: .4rem 0;
+}
+
+
+.characters {
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow-x: scroll;
+    gap: 1.3rem;
+}
+
+.character {
+    max-width: 243px;
+}
+
+.character_img_container {
+    transform: scale(1);
+    transition: all .4s;
+    
+    &:hover {
+        transform: scale(1.1);
+        transition: all .3s;
+    }
+}
+
+.character_name {
+    font-size: .9rem;
+    color: white;
+    font-weight: 600;
+}
+
+.character_history {
+    font-size: .7rem;
+    color: white;
+    font-weight: 200;
+}

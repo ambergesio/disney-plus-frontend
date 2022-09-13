@@ -1,0 +1,97 @@
+@import '../../styles/variables.module.scss';
+
+.container {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #1b1d28;
+}
+
+.signup_form {
+    width: 380px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+}
+
+.fields {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+.inp_field {
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 100%;
+
+    font-size: 1rem;
+    color: white;
+    background:#31333d;
+
+    border: none;
+    border-radius: 6px;
+}
+
+.sign_button {
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 100%;
+
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: white;
+    background: $active_button;
+    transition: all .3s;
+
+    border: none;
+    border-radius: 6px;
+    
+    &:hover {
+        background: $active_buttonhover;
+        transition: all .3s;
+    }
+}
+
+.already {
+    margin-top: 1rem;
+    font-size: .9rem;
+    color: #d1d1d1;
+    font-weight: 200;
+}
+
+.login {
+    margin-left: .4rem;
+    color: #ffffff;
+
+    &:hover {
+        color: $active_buttonhover;
+        text-decoration: underline;
+    }
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
