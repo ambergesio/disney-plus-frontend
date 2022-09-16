@@ -81,7 +81,7 @@ const Movie = ({id, image, title, genre, date, rate, description, details, chara
                 background:
                 radial-gradient(ellipse at 70% top, rgba(35,40,60,0) 20%, rgba(35,40,60,0.8) 50%, rgba(30,35,55,0.9) 100%),
                 url(${background});
-                background-size: contain;
+                background-size: 100%;
                 background-attachment: fixed;
                 background-repeat: no-repeat;
             }
