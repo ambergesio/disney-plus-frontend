@@ -106,17 +106,16 @@ const Header = () => {
                                 </button>
                             </div>
                             <div className={menuopen ? `${style.account_settings} ${style.on}` : `${style.account_settings} ${style.off}`}>
-                            { menuopen ?
+                            { menuopen &&
                                 <>
-                                <div className={style.account_settings_item}><Link href="/"><a className={style.create_profile}><div className={style.account_plus}></div>Crear perfil</a></Link></div>
-                                <div className={style.account_settings_item}><Link href="/"><a>Editar perfiles</a></Link></div>
-                                <div className={style.account_settings_item}><Link href="/"><a>Ajustes de la aplicación</a></Link></div>
-                                <div className={style.account_settings_item}><Link href="/"><a>Cuenta</a></Link></div>
-                                <div className={style.account_settings_item}><Link href="/"><a>Cancelar suscripción</a></Link></div>
-                                <div className={style.account_settings_item}><Link href="/"><a>Ayuda</a></Link></div>
-                                <div className={style.account_settings_item}><Link href="/logout"><a>Cerrar cesión</a></Link></div>
+                                    <div className={style.account_settings_item}><Link href="/"><a className={style.create_profile}><div className={style.account_plus}></div>Crear perfil</a></Link></div>
+                                    <div className={style.account_settings_item}><Link href="/"><a>Editar perfiles</a></Link></div>
+                                    <div className={style.account_settings_item}><Link href="/"><a>Ajustes de la aplicación</a></Link></div>
+                                    <div className={style.account_settings_item}><Link href="/"><a>Cuenta</a></Link></div>
+                                    <div className={style.account_settings_item}><Link href="/"><a>Cancelar suscripción</a></Link></div>
+                                    <div className={style.account_settings_item}><Link href="/"><a>Ayuda</a></Link></div>
+                                    <div className={style.account_settings_item}><Link href="/logout"><a>Cerrar cesión</a></Link></div>
                                 </>
-                            : <></>
                             }
                             </div>
 
